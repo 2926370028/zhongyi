@@ -33,13 +33,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/tcm-robot-app:latest .
+          docker build -t tcm-robot-app:latest .
 
       - name: Push Docker image to registry
         run: |
           # Add commands to push the image to your Docker registry
-          # docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          # docker push ${{ secrets.DOCKER_USERNAME }}/tcm-robot-app:latest
+          # docker login -u zhongyijiqiren -p a18900827366
+          # docker push tcm-robot-app:latest
 
   deploy:
     needs: build
